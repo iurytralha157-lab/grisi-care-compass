@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as InformacoesAoPacienteRouteImport } from './routes/informacoes-ao-paciente'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as AClinicaRibeiraoPretoRouteImport } from './routes/a-clinica.ribeirao-preto'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InformacoesAoPacienteRoute = InformacoesAoPacienteRouteImport.update({
+  id: '/informacoes-ao-paciente',
+  path: '/informacoes-ao-paciente',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AClinicaRibeiraoPretoRoute = AClinicaRibeiraoPretoRouteImport.update({
+  id: '/a-clinica/ribeirao-preto',
+  path: '/a-clinica/ribeirao-preto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/contato': typeof ContatoRoute
+  '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/contato': typeof ContatoRoute
+  '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/contato': typeof ContatoRoute
+  '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/contato'
+    | '/informacoes-ao-paciente'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/a-clinica/ribeirao-preto'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/blog'
+    | '/contato'
+    | '/informacoes-ao-paciente'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/a-clinica/ribeirao-preto'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/contato'
+    | '/informacoes-ao-paciente'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/a-clinica/ribeirao-preto'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
+  ContatoRoute: typeof ContatoRoute
+  InformacoesAoPacienteRoute: typeof InformacoesAoPacienteRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  SobreRoute: typeof SobreRoute
+  AClinicaRibeiraoPretoRoute: typeof AClinicaRibeiraoPretoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/informacoes-ao-paciente': {
+      id: '/informacoes-ao-paciente'
+      path: '/informacoes-ao-paciente'
+      fullPath: '/informacoes-ao-paciente'
+      preLoaderRoute: typeof InformacoesAoPacienteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/a-clinica/ribeirao-preto': {
+      id: '/a-clinica/ribeirao-preto'
+      path: '/a-clinica/ribeirao-preto'
+      fullPath: '/a-clinica/ribeirao-preto'
+      preLoaderRoute: typeof AClinicaRibeiraoPretoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
+  ContatoRoute: ContatoRoute,
+  InformacoesAoPacienteRoute: InformacoesAoPacienteRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  SobreRoute: SobreRoute,
+  AClinicaRibeiraoPretoRoute: AClinicaRibeiraoPretoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
