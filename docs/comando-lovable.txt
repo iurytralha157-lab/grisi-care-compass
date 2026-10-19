@@ -1,0 +1,56 @@
+INSTRUÇÃO PERMANENTE DO PROJETO — INSTITUTO GRISI
+
+A estrutura e o branding atuais deste site foram aprovados. Antes de trabalhar,
+leia o AGENTS.md da raiz e docs/branding-e-estrutura.md. Use a última versão
+aprovada no repositório como referência visual, incluindo desktop e mobile.
+
+NUNCA faça diretamente uma alteração na apresentação ou crie uma página sem
+primeiro propor a mudança e receber minha confirmação explícita. Isso inclui
+textos visíveis, cabeçalho, animações, logo, menu, hero, fotografias, fontes,
+cores, botões, fundos, blocos, espaçamentos, popups e rodapé.
+
+Meu pedido inicial descreve o que quero; primeiro me mostre exatamente qual
+página, componente e arquivos pretende alterar, o que será preservado, os riscos
+para outras páginas e telas, e como vai validar. Inspecione o estado atual e
+mostre uma referência ou rascunho separado quando útil. Pergunte:
+"Posso aplicar exatamente esta alteração, mantendo o restante da estrutura e do
+branding atual?"
+Espere minha resposta antes de editar a apresentação. Silêncio não é aprovação.
+Se eu já tiver aprovado explicitamente a mesma proposta, não peça de novo.
+Implemente só o escopo aprovado; qualquer ampliação precisa de outra confirmação.
+
+Novas páginas devem seguir o mesmo formato e branding, a partir da página
+existente mais próxima: mesmo cabeçalho, topo interno, rodapé, paleta, fontes por
+componente, botões, fundos, blocos, espaçamentos e comportamento responsivo. Use
+Contato/Blog como referência do topo interno quando for o modelo pertinente.
+Só use um formato diferente se eu pedir e aprovar essa exceção expressamente.
+
+Não redesenhe, modernize, simplifique nem aplique template genérico. Preserve as
+logos, fotos e fontes locais, animação do cabeçalho, heros específicos de desktop
+e mobile, carrosséis, popups, certificados, downloads, WhatsApp e demais links.
+Não uniformize fontes ou botões que já têm estilos específicos no modelo atual.
+
+Mantenha Home, Sobre, Informações ao paciente e Contato; agendamento via WhatsApp.
+Sobre é Ribeirão Preto. Brasília permanece removida. Blog continua fora do menu
+e com noindex até autorização específica. Preserve privacidade e créditos.
+
+O projeto atual é TanStack Start/Vite com documentos em src/data/site/*.html e
+assets originais locais em public/. Preserve essa arquitetura, classes, IDs e
+atributos usados por Elementor. Não converta a stack nem use o tema legado de
+src/styles.css como nova identidade. Evite refatorações e atualizações sem relação
+com o pedido, edição de bibliotecas e mudanças em assets minificados de terceiros.
+
+Auditorias, leituras, capturas e testes sem mudanças na apresentação podem ser
+feitos diretamente. Se encontrar um problema de responsividade, mostre a causa e
+a correção proposta e aguarde minha confirmação antes de aplicar. Não esconda
+conteúdo nem corte a página para mascarar defeitos. Depois de uma mudança aprovada,
+compare antes/depois em desktop, tablet, mobile e breakpoints; confira menu,
+scroll do cabeçalho, carrosséis, popups, links e downloads. Relate o que testou
+de fato, sem prometer compatibilidade universal sem evidência.
+
+Não publique, altere hospedagem/domínio ou serviços externos fora do meu escopo
+autorizado. Preserve o histórico Git e o bloco LOVABLE; nunca use force push.
+
+Estas são regras de trabalho para a IA que as receber, não um bloqueio técnico
+universal. Não afirme que outra ferramenta já leu ou salvou estas instruções sem
+verificar isso nela.

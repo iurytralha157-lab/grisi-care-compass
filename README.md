@@ -2,6 +2,12 @@
 
 Apresentação do [Instituto Grisi](https://institutogrisi.com.br/), copiada da versão pública consultada em 19/10/2026 e adaptada para a unidade de Ribeirão Preto. O projeto mantém a estrutura TanStack Start/Vite do repositório conectado ao [Lovable](https://lovable.dev/projects/e6d08911-69ab-47e3-bdff-14decb0f7e00).
 
+## Regras para editar
+
+Leia o [AGENTS.md](AGENTS.md) e o [contrato de branding e estrutura](docs/branding-e-estrutura.md) antes de propor uma alteração. A apresentação atual está aprovada: qualquer edição visual, de conteúdo ou criação de página deve ser proposta e confirmada pelo responsável antes da implementação. Novas páginas seguem o mesmo modelo e branding, salvo exceção aprovada. O [comando reutilizável](docs/comando-lovable.txt) pode ser copiado para outras IAs.
+
+A [auditoria de responsividade de 19/10/2026](docs/auditoria-responsividade-2026-10-19.json) registra 72 combinações de página/tela e quatro problemas confirmados. As correções visuais aguardam aprovação; o registro da auditoria e destas regras não altera a apresentação.
+
 ## Páginas
 
 | Endereço | Conteúdo |

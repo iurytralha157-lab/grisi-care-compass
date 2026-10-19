@@ -1,0 +1,940 @@
+{
+  "date": "2026-10-19",
+  "sourceCommit": "bad81ca0fe6a257779062b316fd2477ed660e459",
+  "scope": "Auditoria local sem alterações na apresentação; correções aguardam aprovação.",
+  "environment": "Chromium do navegador integrado; viewports emulados; sem teste em dispositivos físicos ou outros motores.",
+  "pageViewportChecks": 72,
+  "measurements": [
+    {
+      "width": 320,
+      "route": "/",
+      "bodyWidth": 308,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 64,
+          "text": "Nossos Tratamentos"
+        },
+        {
+          "height": 78,
+          "text": "O Instituto Grisi"
+        },
+        {
+          "height": 78,
+          "text": "Ribeirão Preto"
+        },
+        {
+          "height": 78,
+          "text": "Nossa Clínica"
+        },
+        {
+          "height": 64,
+          "text": "Informações ao Paciente"
+        }
+      ],
+      "scrollWidth": 308
+    },
+    {
+      "width": 320,
+      "route": "/sobre/",
+      "bodyWidth": 308,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Sobre"
+        },
+        {
+          "height": 1.5,
+          "text": "Nossos tratamentos"
+        }
+      ],
+      "scrollWidth": 308
+    },
+    {
+      "width": 320,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 308,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 57.59375,
+          "text": "Informações ao Paciente"
+        },
+        {
+          "height": 57.59375,
+          "text": "Benefícios em ser paciente"
+        }
+      ],
+      "scrollWidth": 308
+    },
+    {
+      "width": 320,
+      "route": "/contato/",
+      "bodyWidth": 308,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Contato"
+        }
+      ],
+      "scrollWidth": 308
+    },
+    {
+      "width": 320,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 475,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Política de privacidade"
+        }
+      ],
+      "scrollWidth": 475
+    },
+    {
+      "width": 320,
+      "route": "/blog/",
+      "bodyWidth": 308,
+      "brokenImages": [],
+      "clientWidth": 308,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Blog"
+        },
+        {
+          "height": 28.796875,
+          "text": "Blog"
+        }
+      ],
+      "scrollWidth": 308
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "bodyWidth": 378,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 64,
+          "text": "Nossos Tratamentos"
+        },
+        {
+          "height": 39,
+          "text": "O Instituto Grisi"
+        },
+        {
+          "height": 39,
+          "text": "Ribeirão Preto"
+        },
+        {
+          "height": 39,
+          "text": "Nossa Clínica"
+        },
+        {
+          "height": 64,
+          "text": "Informações ao Paciente"
+        }
+      ],
+      "scrollWidth": 378
+    },
+    {
+      "width": 390,
+      "route": "/sobre/",
+      "bodyWidth": 378,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Sobre"
+        },
+        {
+          "height": 1.5,
+          "text": "Nossos tratamentos"
+        }
+      ],
+      "scrollWidth": 378
+    },
+    {
+      "width": 390,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 378,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Informações ao Paciente"
+        },
+        {
+          "height": 57.59375,
+          "text": "Benefícios em ser paciente"
+        }
+      ],
+      "scrollWidth": 378
+    },
+    {
+      "width": 390,
+      "route": "/contato/",
+      "bodyWidth": 378,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Contato"
+        }
+      ],
+      "scrollWidth": 378
+    },
+    {
+      "width": 390,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 475,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Política de privacidade"
+        }
+      ],
+      "scrollWidth": 475
+    },
+    {
+      "width": 390,
+      "route": "/blog/",
+      "bodyWidth": 378,
+      "brokenImages": [],
+      "clientWidth": 378,
+      "clipped": [],
+      "headings": [
+        {
+          "height": 28.796875,
+          "text": "Blog"
+        },
+        {
+          "height": 28.796875,
+          "text": "Blog"
+        }
+      ],
+      "scrollWidth": 378
+    },
+    {
+      "width": 360,
+      "route": "/",
+      "bodyWidth": 348,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 348
+    },
+    {
+      "width": 360,
+      "route": "/sobre/",
+      "bodyWidth": 348,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 348
+    },
+    {
+      "width": 360,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 348,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 348
+    },
+    {
+      "width": 360,
+      "route": "/contato/",
+      "bodyWidth": 348,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 348
+    },
+    {
+      "width": 360,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 475,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 475
+    },
+    {
+      "width": 360,
+      "route": "/blog/",
+      "bodyWidth": 348,
+      "brokenImages": [],
+      "clientWidth": 348,
+      "scrollWidth": 348
+    },
+    {
+      "width": 430,
+      "route": "/",
+      "bodyWidth": 418,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 418
+    },
+    {
+      "width": 430,
+      "route": "/sobre/",
+      "bodyWidth": 418,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 418
+    },
+    {
+      "width": 430,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 418,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 418
+    },
+    {
+      "width": 430,
+      "route": "/contato/",
+      "bodyWidth": 418,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 418
+    },
+    {
+      "width": 430,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 475,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 475
+    },
+    {
+      "width": 430,
+      "route": "/blog/",
+      "bodyWidth": 418,
+      "brokenImages": [],
+      "clientWidth": 418,
+      "scrollWidth": 418
+    },
+    {
+      "width": 767,
+      "route": "/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 767,
+      "route": "/sobre/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 767,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 767,
+      "route": "/contato/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 767,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 767,
+      "route": "/blog/",
+      "bodyWidth": 755,
+      "brokenImages": [],
+      "clientWidth": 755,
+      "scrollWidth": 755
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "bodyWidth": 766,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 766
+    },
+    {
+      "width": 768,
+      "route": "/sobre/",
+      "bodyWidth": 756,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 756
+    },
+    {
+      "width": 768,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 756,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 756
+    },
+    {
+      "width": 768,
+      "route": "/contato/",
+      "bodyWidth": 756,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 756
+    },
+    {
+      "width": 768,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 756,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 756
+    },
+    {
+      "width": 768,
+      "route": "/blog/",
+      "bodyWidth": 756,
+      "brokenImages": [],
+      "clientWidth": 756,
+      "scrollWidth": 756
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "bodyWidth": 1022,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1022
+    },
+    {
+      "width": 1024,
+      "route": "/sobre/",
+      "bodyWidth": 1012,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1012
+    },
+    {
+      "width": 1024,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 1012,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1012
+    },
+    {
+      "width": 1024,
+      "route": "/contato/",
+      "bodyWidth": 1012,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1012
+    },
+    {
+      "width": 1024,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 1012,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1012
+    },
+    {
+      "width": 1024,
+      "route": "/blog/",
+      "bodyWidth": 1012,
+      "brokenImages": [],
+      "clientWidth": 1012,
+      "scrollWidth": 1012
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "bodyWidth": 1269,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1269
+    },
+    {
+      "width": 1280,
+      "route": "/sobre/",
+      "bodyWidth": 1268,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1268
+    },
+    {
+      "width": 1280,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 1268,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1268
+    },
+    {
+      "width": 1280,
+      "route": "/contato/",
+      "bodyWidth": 1268,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1295
+    },
+    {
+      "width": 1280,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 1268,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1295
+    },
+    {
+      "width": 1280,
+      "route": "/blog/",
+      "bodyWidth": 1268,
+      "brokenImages": [],
+      "clientWidth": 1268,
+      "scrollWidth": 1295
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 1440,
+      "route": "/sobre/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 1440,
+      "route": "/informacoes-ao-paciente/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 1440,
+      "route": "/contato/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 1440,
+      "route": "/politica-de-privacidade/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 1440,
+      "route": "/blog/",
+      "bodyWidth": 1428,
+      "brokenImages": [],
+      "clientWidth": 1428,
+      "scrollWidth": 1428
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 363
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/sobre/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 363
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/informacoes-ao-paciente/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 363
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/contato/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 363
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/politica-de-privacidade/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 475
+    },
+    {
+      "width": 375,
+      "height": 700,
+      "route": "/blog/",
+      "brokenImages": [],
+      "clientWidth": 363,
+      "scrollWidth": 363
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1023
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/sobre/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1082
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/informacoes-ao-paciente/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1013
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/contato/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1013
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/politica-de-privacidade/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1013
+    },
+    {
+      "width": 1025,
+      "height": 700,
+      "route": "/blog/",
+      "brokenImages": [],
+      "clientWidth": 1013,
+      "scrollWidth": 1082
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 842
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/sobre/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 832
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/informacoes-ao-paciente/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 832
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/contato/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 832
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/politica-de-privacidade/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 832
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/blog/",
+      "brokenImages": [],
+      "clientWidth": 832,
+      "scrollWidth": 832
+    }
+  ],
+  "emailChecks": [
+    {
+      "route": "/contato/",
+      "width": 320,
+      "clippedPixels": 93.28125,
+      "overflow": "hidden",
+      "textRight": 361.28125,
+      "wrapperRight": 268
+    },
+    {
+      "route": "/contato/",
+      "width": 390,
+      "clippedPixels": 23.28125,
+      "overflow": "hidden",
+      "textRight": 361.28125,
+      "wrapperRight": 338
+    },
+    {
+      "route": "/sobre/",
+      "width": 320,
+      "clippedPixels": 93.28125,
+      "overflow": "hidden",
+      "textRight": 361.28125,
+      "wrapperRight": 268
+    },
+    {
+      "route": "/sobre/",
+      "width": 390,
+      "clippedPixels": 23.28125,
+      "overflow": "hidden",
+      "textRight": 361.28125,
+      "wrapperRight": 338
+    }
+  ],
+  "headerRechecks": [
+    {
+      "width": 1025,
+      "route": "/sobre/",
+      "clientWidth": 1013,
+      "ctaLeft": 881.125,
+      "ctaRight": 1081.75,
+      "ctaWidth": 200.625,
+      "scrollWidth": 1082
+    },
+    {
+      "width": 1280,
+      "route": "/contato/",
+      "clientWidth": 1268,
+      "ctaLeft": 1093.9375,
+      "ctaRight": 1294.5625,
+      "ctaWidth": 200.625,
+      "scrollWidth": 1295
+    },
+    {
+      "width": 1440,
+      "route": "/contato/",
+      "clientWidth": 1428,
+      "ctaLeft": 1173.9375,
+      "ctaRight": 1374.5625,
+      "ctaWidth": 200.625,
+      "scrollWidth": 1428
+    }
+  ],
+  "popupChecks": [
+    {
+      "viewport": 320,
+      "id": "543",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 608.8125,
+      "left": 0,
+      "messageHeight": 605,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 605,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "551",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 635.21875,
+      "left": 0,
+      "messageHeight": 631,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 631,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "555",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 700,
+      "left": 0,
+      "messageHeight": 700,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 793,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "559",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 523.609375,
+      "left": 0,
+      "messageHeight": 520,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 520,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "562",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 470.796875,
+      "left": 0,
+      "messageHeight": 467,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 467,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "565",
+      "clientHeight": 700,
+      "clientWidth": 308,
+      "height": 512.796875,
+      "left": 0,
+      "messageHeight": 509,
+      "messageOverflow": "auto",
+      "messageScrollHeight": 509,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 320,
+      "id": "712",
+      "clientWidth": 308,
+      "height": 458.59375,
+      "left": 0,
+      "messageHeight": 459,
+      "messageScrollHeight": 459,
+      "right": 308,
+      "width": 308
+    },
+    {
+      "viewport": 390,
+      "id": "712",
+      "clientWidth": 378,
+      "height": 557.59375,
+      "left": 0,
+      "messageHeight": 558,
+      "messageScrollHeight": 558,
+      "right": 378,
+      "width": 378
+    },
+    {
+      "viewport": 768,
+      "id": "712",
+      "clientWidth": 756,
+      "height": 649.109375,
+      "left": 151,
+      "messageHeight": 649,
+      "messageScrollHeight": 649,
+      "right": 605,
+      "width": 454
+    },
+    {
+      "viewport": 1280,
+      "id": "712",
+      "clientWidth": 1268,
+      "height": 649.109375,
+      "left": 407,
+      "messageHeight": 649,
+      "messageScrollHeight": 649,
+      "right": 861,
+      "width": 454
+    }
+  ],
+  "confirmedIssues": [
+    {
+      "id": "privacy_lists",
+      "summary": "Listas profundas da Política geram rolagem horizontal em celulares de 320 a 430px medidos.",
+      "proposal": "Reduzir apenas recuos das listas em mobile e permitir quebra de palavras; preservar conteúdo e hierarquia."
+    },
+    {
+      "id": "email_clipping",
+      "summary": "Email cortado em Contato e Sobre: cerca de93px em320 e23px em390.",
+      "proposal": "Permitir encolhimento do corpo flex e quebra do email apenas nos dois widgets mobile."
+    },
+    {
+      "id": "home_arrow",
+      "summary": "Seta seguinte dos tratamentos ultrapassa a área útil em10px; observado em768,844,1024 e1025px.",
+      "proposal": "Reposicionar somente esse controle nas larguras afetadas; preservar carrossel, hero, autoplay e imagens."
+    },
+    {
+      "id": "header_cta",
+      "summary": "CTA Agendamento ultrapassa a tela em larguras intermediárias: cerca de69px em1025 e27px em1280.",
+      "proposal": "Reservar largura suficiente para o CTA e redistribuir as colunas do header nas larguras afetadas; preservar logo, tipografia, botão e animação."
+    }
+  ],
+  "status": "approval_required_for_visual_fixes",
+  "limits": [
+    "Medições de largura não substituem revisão visual em todos os dispositivos.",
+    "Algumas medições de navegação precedem o fim das animações; os problemas foram rechecados com geometria específica.",
+    "Nenhuma correção proposta foi aplicada ou validada como solução."
+  ]
+}
