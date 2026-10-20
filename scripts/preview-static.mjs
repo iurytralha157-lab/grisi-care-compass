@@ -113,7 +113,9 @@ const server = http.createServer(async (request, response) => {
       'Content-Type': mimeTypes[path.extname(filename).toLowerCase()] || 'application/octet-stream',
       'Content-Length': info.size,
       'X-Content-Type-Options': 'nosniff',
-      ...(pathname.replace(/\/$/, '') === '/blog' ? { 'X-Robots-Tag': 'noindex, follow' } : {}),
+      ...(['/blog', '/cursos', '/perio-ia'].includes(pathname.replace(/\/$/, ''))
+        ? { 'X-Robots-Tag': 'noindex, follow' }
+        : {}),
     });
     if (request.method === 'HEAD') response.end();
     else createReadStream(filename).on('error', () => response.destroy()).pipe(response);

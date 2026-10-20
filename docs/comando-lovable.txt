@@ -30,9 +30,21 @@ logos, fotos e fontes locais, animação do cabeçalho, heros específicos de de
 e mobile, carrosséis, popups, certificados, downloads, WhatsApp e demais links.
 Não uniformize fontes ou botões que já têm estilos específicos no modelo atual.
 
-Mantenha Home, Sobre, Informações ao paciente e Contato; agendamento via WhatsApp.
-Sobre é Ribeirão Preto. Brasília permanece removida. Blog continua fora do menu
-e com noindex até autorização específica. Preserve privacidade e créditos.
+Mantenha a navegação aprovada em 20/10/2026, nesta ordem: Home (/), Clínica de
+Periodontia (/sobre/), Informações ao Paciente (/informacoes-ao-paciente/), Cursos
+(/cursos/), Perio IA (/perio-ia/) e Contato (/contato/); agendamento via WhatsApp.
+Clínica de Periodontia é o novo nome de Sobre, com a mesma URL e conteúdo de
+Ribeirão Preto. Paciente tem Textos (#textos) e Folders para baixar (#folders);
+Cursos tem Presenciais (#presenciais) e Online (#online); Perio IA tem Apresentação
+(#apresentacao), Guia Rápido (#guia-rapido) e Filmes (#filmes). Use botões internos
+para essas divisões, sem dropdowns no cabeçalho nem páginas separadas por seção.
+Cursos e Perio IA ficam com noindex, follow enquanto aguardam materiais; as
+seções vazias mostram "Em breve.". Não invente inscrições, preços, datas, PDFs,
+vídeos ou ferramenta de IA. O menu compacto existente vai até 1200 px; o menu
+horizontal com seis itens e Agendamento começa em 1201 px. Preserve a animação e
+os estados de scroll. Brasília permanece removida. Blog continua fora do menu
+e com noindex até autorização específica. Preserve privacidade, créditos,
+certificados GBT e podcasts.
 
 O projeto atual é TanStack Start/Vite com documentos em src/data/site/*.html e
 assets originais locais em public/. Preserve essa arquitetura, classes, IDs e

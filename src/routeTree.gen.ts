@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CursosRouteImport } from './routes/cursos'
 import { Route as InformacoesAoPacienteRouteImport } from './routes/informacoes-ao-paciente'
+import { Route as PerioIaRouteImport } from './routes/perio-ia'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as AClinicaRibeiraoPretoRouteImport } from './routes/a-clinica.ribeirao-preto'
@@ -32,9 +34,19 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CursosRoute = CursosRouteImport.update({
+  id: '/cursos',
+  path: '/cursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InformacoesAoPacienteRoute = InformacoesAoPacienteRouteImport.update({
   id: '/informacoes-ao-paciente',
   path: '/informacoes-ao-paciente',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerioIaRoute = PerioIaRouteImport.update({
+  id: '/perio-ia',
+  path: '/perio-ia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
@@ -57,7 +69,9 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
+  '/cursos': typeof CursosRoute
   '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/perio-ia': typeof PerioIaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
@@ -66,7 +80,9 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
+  '/cursos': typeof CursosRoute
   '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/perio-ia': typeof PerioIaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
@@ -76,7 +92,9 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
+  '/cursos': typeof CursosRoute
   '/informacoes-ao-paciente': typeof InformacoesAoPacienteRoute
+  '/perio-ia': typeof PerioIaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/a-clinica/ribeirao-preto': typeof AClinicaRibeiraoPretoRoute
@@ -87,7 +105,9 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/contato'
+    | '/cursos'
     | '/informacoes-ao-paciente'
+    | '/perio-ia'
     | '/politica-de-privacidade'
     | '/sobre'
     | '/a-clinica/ribeirao-preto'
@@ -96,7 +116,9 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/contato'
+    | '/cursos'
     | '/informacoes-ao-paciente'
+    | '/perio-ia'
     | '/politica-de-privacidade'
     | '/sobre'
     | '/a-clinica/ribeirao-preto'
@@ -105,7 +127,9 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/contato'
+    | '/cursos'
     | '/informacoes-ao-paciente'
+    | '/perio-ia'
     | '/politica-de-privacidade'
     | '/sobre'
     | '/a-clinica/ribeirao-preto'
@@ -115,7 +139,9 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
   ContatoRoute: typeof ContatoRoute
+  CursosRoute: typeof CursosRoute
   InformacoesAoPacienteRoute: typeof InformacoesAoPacienteRoute
+  PerioIaRoute: typeof PerioIaRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SobreRoute: typeof SobreRoute
   AClinicaRibeiraoPretoRoute: typeof AClinicaRibeiraoPretoRoute
@@ -144,11 +170,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cursos': {
+      id: '/cursos'
+      path: '/cursos'
+      fullPath: '/cursos'
+      preLoaderRoute: typeof CursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/informacoes-ao-paciente': {
       id: '/informacoes-ao-paciente'
       path: '/informacoes-ao-paciente'
       fullPath: '/informacoes-ao-paciente'
       preLoaderRoute: typeof InformacoesAoPacienteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perio-ia': {
+      id: '/perio-ia'
+      path: '/perio-ia'
+      fullPath: '/perio-ia'
+      preLoaderRoute: typeof PerioIaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-privacidade': {
@@ -179,7 +219,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
   ContatoRoute: ContatoRoute,
+  CursosRoute: CursosRoute,
   InformacoesAoPacienteRoute: InformacoesAoPacienteRoute,
+  PerioIaRoute: PerioIaRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SobreRoute: SobreRoute,
   AClinicaRibeiraoPretoRoute: AClinicaRibeiraoPretoRoute,

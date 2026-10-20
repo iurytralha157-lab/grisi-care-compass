@@ -9,6 +9,8 @@ import { Route as PatientRoute } from "@/routes/informacoes-ao-paciente";
 import { Route as ContactRoute } from "@/routes/contato";
 import { Route as PrivacyRoute } from "@/routes/politica-de-privacidade";
 import { Route as BlogRoute } from "@/routes/blog";
+import { Route as CoursesRoute } from "@/routes/cursos";
+import { Route as PerioIaRoute } from "@/routes/perio-ia";
 
 const publicRoot = resolve(process.cwd(), "public");
 const origin = "https://grisi-copy.test";
@@ -22,7 +24,7 @@ const pageCases = [
   {
     name: "sobre",
     route: SobreRoute,
-    title: "Sobre – Instituto Grisi",
+    title: "Clínica de Periodontia – Instituto Grisi",
     content: "Quem irá cuidar de você?",
   },
   {
@@ -48,6 +50,18 @@ const pageCases = [
     route: BlogRoute,
     title: "Blog – Instituto Grisi",
     content: "Em breve, novos conteúdos",
+  },
+  {
+    name: "cursos",
+    route: CoursesRoute,
+    title: "Cursos – Instituto Grisi",
+    content: "Presenciais",
+  },
+  {
+    name: "perioIa",
+    route: PerioIaRoute,
+    title: "Perio IA – Instituto Grisi",
+    content: "Guia Rápido",
   },
 ] as const;
 
@@ -117,7 +131,7 @@ describe.each(pageCases)("Instituto Grisi: $name", ({ name, route, title, conten
     expect(handlers(route).HEAD().body).toBeNull();
   });
 
-  it("keeps the four requested navigation entries and working Home links", () => {
+  it("keeps the six approved navigation entries, Home links and WhatsApp scheduling", () => {
     const doc = parse(sitePages[name]);
     const menu = [...doc.querySelectorAll("header nav ul > li > a")].map((anchor) => ({
       label: text(anchor),
@@ -125,8 +139,10 @@ describe.each(pageCases)("Instituto Grisi: $name", ({ name, route, title, conten
     }));
     expect(menu).toEqual([
       { label: "Home", href: "/" },
-      { label: "Sobre", href: "/sobre/" },
+      { label: "Clínica de Periodontia", href: "/sobre/" },
       { label: "Informações ao Paciente", href: "/informacoes-ao-paciente/" },
+      { label: "Cursos", href: "/cursos/" },
+      { label: "Perio IA", href: "/perio-ia/" },
       { label: "Contato", href: "/contato/" },
     ]);
     expect(doc.querySelector('a[href=""]')).toBeNull();
@@ -134,6 +150,12 @@ describe.each(pageCases)("Instituto Grisi: $name", ({ name, route, title, conten
     doc.querySelectorAll("header a").forEach((logo) => {
       if (logo.querySelector("img")) expect(logo.getAttribute("href")).toBe("/");
     });
+    expect(doc.querySelector("header nav ul ul")).toBeNull();
+    const scheduling = doc.querySelector(
+      'header a[href="https://api.whatsapp.com/send?phone=5516997932803"]',
+    );
+    expect(text(scheduling)).toBe("Agendamento");
+    expect(scheduling?.getAttribute("target")).toBe("_blank");
   });
 
   it("contains only the retained clinic's visible content and usable email links", () => {
@@ -166,14 +188,100 @@ describe.each(pageCases)("Instituto Grisi: $name", ({ name, route, title, conten
   });
 });
 
+describe("Approved content sections", () => {
+  const sections = [
+    {
+      page: "paciente",
+      entries: [
+        ["textos", "Textos"],
+        ["folders", "Folders para baixar"],
+      ],
+    },
+    {
+      page: "cursos",
+      entries: [
+        ["presenciais", "Presenciais"],
+        ["online", "Online"],
+      ],
+    },
+    {
+      page: "perioIa",
+      entries: [
+        ["apresentacao", "Apresentação"],
+        ["guia-rapido", "Guia Rápido"],
+        ["filmes", "Filmes"],
+      ],
+    },
+  ] as const;
+
+  it.each(sections)(
+    "links every $page section to real, clearly pending content",
+    ({ page, entries }) => {
+      const doc = parse(sitePages[page]);
+      for (const [id, label] of entries) {
+        const section = doc.getElementById(id);
+        expect(section, `Missing section #${id}`).not.toBeNull();
+        expect(doc.querySelectorAll(`[id="${id}"]`)).toHaveLength(1);
+        expect(text(section?.querySelector("h2, h3") ?? null)).toBe(label);
+        expect(text(section)).toContain("Em breve.");
+        const link = doc.querySelector(`main a[href="#${id}"]`);
+        expect(text(link)).toBe(label);
+        expect(section?.querySelector("a[download], form, video, iframe")).toBeNull();
+      }
+    },
+  );
+
+  it("preserves patient information, existing podcasts and social destinations", () => {
+    const doc = parse(sitePages.paciente);
+    const content = bodyText(doc);
+    for (const original of [
+      "Benefícios em ser paciente",
+      "Priorizamos as orientações e check-up preventivos",
+      "Aliamos tecnologia aos atendimentos clínicos.",
+      "Terapia Periodontal de Suporte",
+      "Nosso Podcast",
+    ]) {
+      expect(content).toContain(original);
+    }
+    expect(doc.querySelectorAll('main a[href^="https://open.spotify.com/episode/"]')).toHaveLength(
+      9,
+    );
+    for (const url of [
+      "https://www.instagram.com/institutogrisi/",
+      "https://www.facebook.com/institutogrisi",
+      "https://www.youtube.com/channel/UCssdiWu1L8YzyO-QomaiDEw",
+    ]) {
+      expect(doc.querySelector(`main a[href="${url}"]`)).not.toBeNull();
+    }
+  });
+
+  it.each(["cursos", "perioIa"] as const)(
+    "does not invent enrollment, an AI tool or downloadable material on %s",
+    (page) => {
+      const doc = parse(sitePages[page]);
+      expect(
+        doc.querySelector(
+          "main form, main input, main textarea, main video, main iframe, main a[download]",
+        ),
+      ).toBeNull();
+      expect(bodyText(doc)).not.toMatch(
+        /R\$|inscreva-se|comprar curso|conversar com a IA|iniciar chat/i,
+      );
+    },
+  );
+});
+
 describe("Requested source behavior and layout", () => {
-  it("uses Sobre in both the page title and breadcrumb", () => {
+  it("renames the clinic without changing its route, doctor or treatment content", () => {
     const doc = parse(sitePages.sobre);
     const masthead = doc.querySelector("main section");
-    expect(text(masthead?.querySelector("h2") ?? null)).toBe("Sobre");
+    expect(text(masthead?.querySelector("h2") ?? null)).toBe("Clínica de Periodontia");
     expect(text(masthead?.querySelector(".elementor-icon-list-items") ?? null)).toBe(
-      "Início Sobre",
+      "Início Clínica de Periodontia",
     );
+    expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe("/sobre/");
+    expect(bodyText(doc)).toContain("Dr. Márcio Fernando de Moraes Grisi");
+    expect(bodyText(doc)).toContain("MEDICINA PERIODONTAL");
   });
 
   it("retains the original four hero slides and distinct desktop/mobile artwork", () => {
@@ -236,12 +344,20 @@ describe("Requested source behavior and layout", () => {
     }
   });
 
-  it("keeps Blog reachable with its own canonical while excluding it from indexing", () => {
-    const doc = parse(sitePages.blog);
-    expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe("/blog/");
-    expect(doc.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe(
-      "noindex, follow",
-    );
-    expect(handlers(BlogRoute).GET().headers.get("X-Robots-Tag")).toBe("noindex, follow");
-  });
+  it.each([
+    { page: "blog", route: BlogRoute, canonical: "/blog/" },
+    { page: "cursos", route: CoursesRoute, canonical: "/cursos/" },
+    { page: "perioIa", route: PerioIaRoute, canonical: "/perio-ia/" },
+  ] as const)(
+    "keeps $page reachable with its own canonical and noindex",
+    ({ page, route, canonical }) => {
+      const doc = parse(sitePages[page]);
+      expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe(canonical);
+      expect(doc.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe(
+        "noindex, follow",
+      );
+      expect(handlers(route).GET().headers.get("X-Robots-Tag")).toBe("noindex, follow");
+      expect(handlers(route).HEAD().headers.get("X-Robots-Tag")).toBe("noindex, follow");
+    },
+  );
 });

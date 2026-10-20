@@ -62,9 +62,22 @@ correção proposta antes de editar.
   usado se proposto e aprovado explicitamente como exceção.
 - Preserve as logos, fotos, fontes e certificados locais; o WhatsApp, os links,
   as animações do cabeçalho, carrosséis, popups e downloads existentes.
-- A navegação pública permanece Home, Sobre, Informações ao paciente e Contato,
-  com agendamento pelo WhatsApp. Brasília permanece removida. O Blog permanece
-  fora do menu e com `noindex` até uma autorização específica para mudar isso.
+- A navegação aprovada em 20/10/2026 é Home, Clínica de Periodontia, Informações
+  ao Paciente, Cursos, Perio IA e Contato, com agendamento pelo WhatsApp.
+  Clínica de Periodontia mantém a URL `/sobre/` e o conteúdo de Ribeirão Preto.
+  Informações ao Paciente mantém `/informacoes-ao-paciente/` e as seções Textos
+  (`#textos`) e Folders para baixar (`#folders`). Cursos usa `/cursos/`, com
+  `#presenciais` e `#online`. Perio IA usa `/perio-ia/`, com `#apresentacao`,
+  `#guia-rapido` e `#filmes`. As seções usam botões internos, sem dropdowns no
+  cabeçalho nem novas páginas separadas para cada seção.
+- Cursos e Perio IA permanecem com `noindex, follow` e as seções sem materiais
+  mostram “Em breve.” até o fornecimento e a aprovação do conteúdo. Não invente
+  cursos, inscrições, preços, datas, PDFs, vídeos ou ferramenta de IA. O cabeçalho
+  usa o menu compacto existente até 1200 px e a navegação horizontal a partir de
+  1201 px; preserve a animação e os estados de scroll.
+- Brasília permanece removida. O Blog permanece fora do menu e com `noindex`
+  até uma autorização específica para mudar isso. Privacidade, certificados GBT,
+  podcasts e créditos permanecem preservados.
 - Preserve as diferenças desktop/tablet/mobile. Não force a versão desktop no
   celular nem oculte conteúdo ou corte a página para mascarar transbordamento.
 

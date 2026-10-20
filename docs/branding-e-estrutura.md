@@ -5,6 +5,9 @@ Este documento registra a estrutura e o branding aprovados e complementa o
 edição pontual descaracterize o site. Não constitui autorização para uma alteração
 visual. A referência inicial é o commit `bad81ca`; alterações posteriores só
 passam a compor a referência quando aprovadas pelo responsável pelo projeto.
+O contrato de navegação abaixo incorpora a proposta aprovada em 20/10/2026;
+essa aprovação não abrange uma reformulação do site ou as correções pendentes
+da auditoria de responsividade anterior.
 
 ## Confirmação obrigatória antes da edição
 
@@ -46,6 +49,7 @@ exige um novo pedido de autorização para o mesmo trabalho de documentação.
 | Rodapé compartilhado | HTML `data-elementor-id="37"` e `post-37.css` |
 | Home, heros e carrosséis | `home.html` e `post-17.css` |
 | Topo e blocos de Contato/Blog | `contato.html`, `blog.html` e `post-304.css` |
+| Adaptação aprovada do menu e das seções novas | `public/grisi-navigation.css` |
 | Movimento e comportamento | `data-settings`, classes e scripts locais referenciados nos HTML |
 | Fontes, logos, fotografias e certificados | `public/wp-content/` e `public/_external/` |
 | Exportação e prévia estática | `scripts/export-static.mjs` e `scripts/preview-static.mjs` |
@@ -126,11 +130,42 @@ São valores de referência sujeitos aos overrides atuais de cada elemento.
 
 ## Novas páginas e navegação
 
-A navegação pública aprovada é Home, Sobre, Informações ao paciente e Contato.
-O agendamento usa WhatsApp. Sobre corresponde à unidade de Ribeirão Preto.
+A navegação pública aprovada em 20/10/2026 tem seis itens, nesta ordem, e mantém
+o Agendamento pelo WhatsApp:
+
+| Item | Destino | Conteúdo e divisões |
+| --- | --- | --- |
+| Home | `/` | Home atual, com hero e carrosséis preservados |
+| Clínica de Periodontia | `/sobre/` | Nome novo de Sobre; mesma URL, clínica, equipe, tratamentos, imagens e contatos de Ribeirão Preto |
+| Informações ao Paciente | `/informacoes-ao-paciente/` | Conteúdo e podcasts existentes; Textos em `#textos` e Folders para baixar em `#folders` |
+| Cursos | `/cursos/` | Presenciais em `#presenciais` e Online em `#online` |
+| Perio IA | `/perio-ia/` | Apresentação em `#apresentacao`, Guia Rápido em `#guia-rapido` e Filmes em `#filmes` |
+| Contato | `/contato/` | Conteúdo, localização e orientações atuais de Ribeirão Preto |
+
+As divisões são acessadas por botões dentro da própria página. Não criar
+dropdowns no cabeçalho nem uma página independente para cada divisão. Preserve
+os nomes e as âncoras acima para que os links continuem funcionando. A mudança
+de Sobre para Clínica de Periodontia é de rótulo, título e breadcrumb; não cria
+uma nova URL nem autoriza reescrever o conteúdo clínico.
+
+Cursos e Perio IA são páginas preparadas no mesmo modelo de Contato/Blog. Enquanto
+não houver materiais fornecidos e aprovados, as seções sem conteúdo mostram
+**“Em breve.”**, inclusive os novos folders sem arquivos. Não inventar cursos,
+inscrições, preços, datas, PDFs, vídeos nem uma ferramenta de IA funcional. As
+duas páginas novas usam `noindex, follow` até receberem conteúdo. A publicação de
+materiais ou mudança de indexação exige proposta e confirmação específicas.
+
+O cabeçalho mantém o menu compacto existente até **1200 px**, inclusive, e mostra
+os seis itens e Agendamento em linha a partir de **1201 px**. Essa adaptação
+aprovada acomoda os rótulos novos; preserve a abertura e o fechamento do menu, as
+animações, a aparência e os estados do cabeçalho ao rolar. Os blocos novos ficam
+em uma coluna no celular. Os demais breakpoints de cada componente continuam
+dependendo de seu CSS atual, não de uma substituição global por 1200 px.
+
 Brasília foi removida e não deve reaparecer em menus, conteúdo, contatos, mapas
 ou novos blocos. Nomes antigos de assets não constituem autorização para publicar
-conteúdo de Brasília.
+conteúdo de Brasília. Certificados GBT, podcasts, política de privacidade e
+crédito de desenvolvimento continuam preservados.
 
 O Blog já existe em `/blog`, no mesmo padrão visual, fora do menu e com `noindex`.
 Não adicionar o Blog à navegação nem mudar a indexação sem pedido e confirmação
@@ -148,7 +183,8 @@ menu automaticamente. Um formato diferente exige uma exceção descrita e aprova
 Uma verificação precisa preservar a aparência e identificar falhas reais:
 
 - conferir 320, 360, 375, 390, 430, 768, 1024, 1280 e 1440 px, além dos dois lados
-  dos breakpoints existentes de 767/768 e 1024/1025 px quando afetados;
+  dos breakpoints de 767/768 e 1024/1025 px dos componentes afetados e de
+  1200/1201 px do cabeçalho;
 - conferir rotação/orientação e altura da tela quando houver menu, hero ou popup;
 - verificar ausência de scroll horizontal indevido, texto cortado, sobreposição,
   imagens distorcidas, botões inacessíveis e conteúdo bloqueado pelo cabeçalho;
