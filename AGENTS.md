@@ -96,9 +96,34 @@ correção proposta antes de editar.
 - Valide desktop, tablet e mobile, inclusive os limites de breakpoint, menus,
   scroll do cabeçalho, carrosséis, popups, downloads e links afetados. Registre
   dimensões e resultados reais; não declare compatibilidade universal sem prova.
-- Faça somente commits e envios ao GitHub autorizados no escopo da tarefa.
-  Publicação, hospedagem, domínio e serviços externos exigem autorização própria.
-  Preserve o bloco LOVABLE acima e nunca reescreva o histórico remoto.
+- Faça somente commits e envios ao GitHub dentro do escopo autorizado. Um push
+  para `main` aciona a publicação automática no Cloudflare Pages conforme o fluxo
+  autorizado abaixo. Preserve o bloco LOVABLE e nunca reescreva o histórico remoto.
+
+## Publicação automática autorizada em 21/10/2026
+
+- Projeto Cloudflare Pages: `grisi-care-compass`, conectado ao repositório GitHub
+  `iurytralha157-lab/grisi-care-compass`, branch de produção `main`. O aplicativo
+  oficial do GitHub foi autorizado somente para esse repositório.
+- Configuração aprovada: framework preset `None`; build
+  `npm ci && npm test && npm run build`; diretório de saída `.output/public`;
+  variáveis `NODE_VERSION=24`, `SKIP_DEPENDENCY_INSTALL=1` e
+  `NITRO_PRESET=cloudflare-module`.
+- Após a aprovação das alterações e a conclusão das checagens pertinentes,
+  o commit e push para `main` fazem parte desse fluxo já autorizado e disparam
+  publicação automática no Pages. Não peça uma aprovação de deploy duplicada
+  para essa mesma publicação. A aprovação prévia das mudanças visuais, de
+  conteúdo e de novas páginas continua obrigatória; a integração não a substitui.
+- A autorização abrange esse projeto e seu endereço `pages.dev`. DNS, domínio
+  próprio, serviços novos, outras contas, repositórios ou destinos de publicação
+  continuam exigindo autorização específica. Não amplie permissões do aplicativo.
+- Preserve `public/404.html`, com `noindex, follow` e o branding existente; sua
+  presença na raiz da saída estática evita o fallback SPA para URLs inexistentes.
+  Preserve em `public/_redirects` as duas regras 301, com e sem barra final, de
+  `/a-clinica/ribeirao-preto` para `/sobre/`.
+- Um push ou build local não comprova publicação concluída. Antes de relatar
+  sucesso, confira o estado do deployment no Pages, o commit implantado e a URL
+  de destino; valide páginas, assets, os dois redirects e a resposta 404 reais.
 
 Segundo a [documentação do Lovable](https://docs.lovable.dev/features/knowledge),
 o editor lê automaticamente o `AGENTS.md` da raiz. Estas são instruções de

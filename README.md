@@ -65,10 +65,35 @@ O comando `npm run preview` serve a exportação existente com Node.js, sem reco
 - `public/grisi-navigation.css`: ajustes delimitados da navegação aprovada e das seções novas, preservando os estilos originais de terceiros.
 - `public/wp-content/` e `public/wp-includes/`: estilos, scripts e mídia da apresentação original.
 - `public/_external/`: fontes externas copiadas para servir localmente.
+- `public/404.html` e `public/_redirects`: tratamento de URLs inexistentes e redirecionamentos na publicação estática do Pages.
 - `scripts/export-static.mjs` e `scripts/preview-static.mjs`: exportação dos documentos e servidor local de prévia.
 
 Ao editar a apresentação, preserve as classes e os atributos usados pelos estilos e scripts Elementor. Alterações em um documento não atualizam automaticamente o cabeçalho ou o rodapé das outras páginas. Confira o resultado em desktop e mobile, além dos menus, links, carrosséis e popups.
 
-## GitHub e Lovable
+## GitHub, Lovable e Cloudflare Pages
 
-O histórico Git e a configuração de conexão com o Lovable são preservados. As mudanças são feitas por commits normais, sem reescrever o histórico ou usar force push. O projeto continua disponível no editor Lovable pelo link acima; a publicação depende do fluxo de hospedagem escolhido para o projeto.
+O histórico Git e a configuração de conexão com o Lovable são preservados. As mudanças são feitas por commits normais, sem reescrever o histórico ou usar force push. O projeto continua disponível no editor Lovable pelo link acima.
+
+Em 21/10/2026, o responsável autorizou a integração oficial do GitHub restrita a este repositório e a publicação automática da `main` no projeto Cloudflare Pages `grisi-care-compass`, em seu endereço `pages.dev`. A configuração aprovada é:
+
+| Campo | Valor |
+| --- | --- |
+| Repositório | `iurytralha157-lab/grisi-care-compass` |
+| Branch de produção | `main` |
+| Framework preset | `None` |
+| Build command | `npm ci && npm test && npm run build` |
+| Build output directory | `.output/public` |
+| `NODE_VERSION` | `24` |
+| `SKIP_DEPENDENCY_INSTALL` | `1` |
+| `NITRO_PRESET` | `cloudflare-module` |
+
+Depois da aprovação das alterações e das checagens pertinentes, o commit e push para `main` disparam a publicação automática no Pages. Essa publicação integra o fluxo já autorizado e não exige uma confirmação de deploy adicional para o mesmo escopo. As regras de proposta e confirmação antes de editar aparência, conteúdo ou criar páginas continuam valendo. DNS, domínio próprio, novos serviços, ampliação de permissões e outros destinos de publicação exigem autorização específica.
+
+`public/404.html` é uma página com o branding de Contato/Blog e `noindex, follow`; copiada para a raiz da saída estática, permite que o Pages trate URLs inexistentes como 404 e evita o fallback SPA. `public/_redirects` mantém os dois redirecionamentos permanentes necessários na hospedagem estática:
+
+```text
+/a-clinica/ribeirao-preto /sobre/ 301
+/a-clinica/ribeirao-preto/ /sobre/ 301
+```
+
+Esta seção registra a autorização e a configuração do fluxo. Um push ou build local não comprova que uma implantação terminou. Para relatar sucesso de cada publicação, confira o estado no Pages, o commit implantado e a URL de destino, além das respostas reais das páginas, assets, redirects e 404.
