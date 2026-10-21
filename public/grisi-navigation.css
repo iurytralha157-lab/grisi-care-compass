@@ -105,6 +105,15 @@
     padding: 14px 22px;
   }
 }
+/* The sticky header's backdrop filter makes it the fixed menu's containing block.
+   Size the drawer and overlay to the viewport instead of the header's height. */
+@media (max-width: 1200px) {
+  .elementor-25 .elementskit-menu-offcanvas-elements,
+  .elementor-25 .elementskit-menu-overlay {
+    height: 100vh !important;
+    height: 100dvh !important;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1200px) {
   .elementskit-navbar-nav-default
     .elementskit-dropdown-has
