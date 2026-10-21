@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# Ignore the build output, while keeping vendor assets under public/**/dist.
+/dist
 dist-ssr
 .output
 .vinxi
